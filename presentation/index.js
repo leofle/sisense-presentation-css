@@ -275,6 +275,7 @@ render(
           ranges={[
             { loc: [0, 270], title: "CSS structure" },
             { loc: [1, 2], note: "Selector" },
+            { loc: [2, 3], note: "Declaration" },
             { loc: [2, 3], note: "Property: Value" },
             { loc: [1, 2], note: "Can be a class" },
             { loc: [5, 6], note: "Can be an ID" },
