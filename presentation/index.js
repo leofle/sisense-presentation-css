@@ -180,11 +180,52 @@ render(
       <div class="two"></div>
     </div>
 
-    @supports (-css: variables){
+    @supports (--css: variables){
       .one {
         background-color: var(--css);
       }
     }
+  `;
+  const cssGrid = `
+  <div class="wrapper">
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+    <div class="four">Four</div>
+    <div class="five">Five</div>
+    <div class="six">Six</div>
+  </div>
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+  }
+  .four {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 4;
+  }
   `;
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
@@ -300,7 +341,7 @@ render(
             { loc: [0, 270], title: "CSS Variables!!" },
             { loc: [0, 4], note: "Declare your variable" },
             { loc: [4, 7], note: "Use it with var()" },
-            { loc: [8, 11], note: "Camel case properties, string values" },
+            { loc: [8, 11] },
             { loc: [12, 15] },
             { loc: [16, 20] },
             { loc: [21, 28] },
@@ -309,6 +350,25 @@ render(
             { loc: [34, 39] }
           ]}
         />
+        <CodeSlide
+          transition={["fade"]}
+          lang="js"
+          code={cssGrid}
+          ranges={[
+            { loc: [0, 270], title: "CSS Grid-layout" },
+            { loc: [0, 9], note: "HTML parent wrapper with 6 children" },
+            { loc: [10, 16], note: "Apply grid" },
+            { loc: [16, 20], note: "Apply position of each cell" },
+            { loc: [20, 24] },
+            { loc: [24, 28] },
+            { loc: [28, 32] },
+            { loc: [32, 36] },
+            { loc: [36, 40] }
+          ]}
+        />
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" target="_blank">Demo</Link></Heading>
+        </Slide>
         <Slide transition={["fade"]} bgColor="hotpink">
           <Heading size={2} textColor="secondary">2013 - Present</Heading>
           <Text textColor="hotpink">blah blah</Text>
