@@ -146,6 +146,46 @@ render(
   </div>
 
   `;
+  const cssVariables = `
+    element {
+      --my-bg-color: hotpink;
+    }
+    .myClass {
+      background-color: var(--my-bg-color);
+    }
+
+    <div class="myClass">
+      <div class="one"></div>
+    </div>
+
+    .one {
+      background-color: var(--my-bg-color, red);
+    }
+
+    <div class="myClass">
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
+
+    .myClass {
+      background-color: var(--my-bg-color);
+    }
+
+    .one {
+      background-color: var(--my-bg-color, red);
+    }
+
+    <div class="myClass">
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
+
+    @supports (-css: variables){
+      .one {
+        background-color: var(--css);
+      }
+    }
+  `;
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
         <Slide transition={["zoom"]} bgColor="micolor">
@@ -249,6 +289,23 @@ render(
           ranges={[
             { loc: [0, 6], note: "Injected inside style tags" },
             { loc: [7, 11], note: "Inside style attribute" }
+          ]}
+        />
+        <CodeSlide
+          transition={["fade"]}
+          lang="js"
+          code={cssVariables}
+          ranges={[
+            { loc: [0, 270], title: "CSS Variables!!" },
+            { loc: [0, 4], note: "Declare your variable" },
+            { loc: [4, 7], note: "Use it with var()" },
+            { loc: [8, 11], note: "Camel case properties, string values" },
+            { loc: [12, 15] },
+            { loc: [16, 20] },
+            { loc: [21, 28] },
+            { loc: [31, 32] },
+            { loc: [29, 30] },
+            { loc: [34, 39] }
           ]}
         />
         <Slide transition={["fade"]} bgColor="hotpink">
