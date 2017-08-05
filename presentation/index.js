@@ -234,7 +234,7 @@ render(
             Past Present and Future of CSS
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit>
-            how to survived in a component world
+            how to survive in a component world
           </Text>
           <Text margin="10px 0 0" textColor="#000" size={3} fit bold>
             twitter: @leofle,            github: leofle,
