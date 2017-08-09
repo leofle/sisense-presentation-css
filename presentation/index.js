@@ -40,7 +40,8 @@ const images = {
   cup: require("../assets/cup1994.png"),
   opera: require("../assets/opera.png"),
   w3c: require("../assets/w3c.png"),
-  sisense: require("../assets/sisense.jpg")
+  sisense: require("../assets/sisense.jpg"),
+  future: require("../assets/future.jpg")
 };
 
 preloader(images);
@@ -324,6 +325,9 @@ render(
 
           ]}
         />
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://specificity.keegan.st/" target="_blank">Specificity</Link></Heading>
+        </Slide>
         <CodeSlide
           transition={["fade"]}
           lang="js"
@@ -394,8 +398,8 @@ render(
             {/* <Slide transition={["fade"]} bgColor="micolor">
               <ComponentPlayground code={bgCode} theme="dark" previewBackgroundColor="yellow" />
             </Slide> */}
-            <Slide transition={["fade"]} bgColor="tertiary">
-              <Heading size={2} textColor="secondary">👩🏼‍🚀 Future</Heading>
+            <Slide transition={["fade"]} bgImage={images.future}>
+              <Heading size={2} textColor="primary">Future</Heading>
             </Slide>
             <CodeSlide
               transition={["fade"]}
