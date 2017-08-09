@@ -41,7 +41,8 @@ const images = {
   opera: require("../assets/opera.png"),
   w3c: require("../assets/w3c.png"),
   sisense: require("../assets/sisense.jpg"),
-  future: require("../assets/future.jpg")
+  future: require("../assets/future.jpg"),
+  start: require("../assets/start.jpg")
 };
 
 preloader(images);
@@ -230,18 +231,7 @@ render(
   `;
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
-        <Slide transition={["zoom"]} bgColor="micolor">
-          <Heading size={1} fit caps lineHeight={1} textColor="#000">
-            Past Present and Future of CSS
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit>
-            how to survive in a component world
-          </Text>
-          <Text margin="10px 0 0" textColor="#000" size={3} fit bold>
-            twitter: @leofle,            github: leofle,
-            medium: leofle,            npm: fleo
-          </Text>
-        </Slide>
+        <Slide transition={["zoom"]} bgImage={images.start}/>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={2} textColor="black"> Sr UX Engineer </Heading>
           <Text textColor="primary">blah blah</Text>
