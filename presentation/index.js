@@ -45,7 +45,9 @@ const images = {
   start: require("../assets/start.jpg"),
   past1994: require("../assets/1994.png"),
   past1996: require("../assets/1996.png"),
-  past2013: require("../assets/2013.png")
+  past2013: require("../assets/2013.png"),
+  bg: require("../assets/bg.jpg"),
+  thanks: require("../assets/thanks.png")
 };
 
 const gifs = {
@@ -64,7 +66,8 @@ const theme = createTheme({
   tertiary: "#03A9FC",
   quartenary: "#CECECE",
   micolor: "#ffcb05",
-  black: "#000"
+  black: "#000",
+  transparent: "transparent"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -243,36 +246,36 @@ render(
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
         <Slide transition={["zoom"]} bgImage={images.start}/>
-        <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={2} textColor="black"> Sr UX Engineer </Heading>
-          <Text textColor="primary">blah blah</Text>
-          <Image src={images.sisense} width={500} />
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Heading size={2} textColor="primary"> Sr UX Engineer </Heading>
+          <Text textColor="transparent">blah blah</Text>
+          <Image src={images.sisense} bgColor="primary" width={500} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="lime">
-          <Heading size={2} textColor="secondary"> I make cool stuff!</Heading>
-          <Text textColor="lime">blah blah</Text>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Heading size={2} textColor="primary"> I make cool stuff!</Heading>
+          <Text textColor="transparent">blah blah</Text>
           <Heading size={3} textColor="secondary">🤘</Heading>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.past1994}/>
-        <Slide transition={["fade"]} bgColor="black">
+        <Slide transition={["fade"]} bgImage={images.bg}>
           <Image src={images.cup} width={500} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary">
-        <Heading size={2} textColor="secondary">Håkon Wium Lie</Heading>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+        <Heading size={2} textColor="primary">Håkon Wium Lie</Heading>
           <Image src={images.hak} width={300} />
         </Slide>
-        <Slide>
+        <Slide transition={["fade"]} bgImage={images.bg}>
           <Image src={images.opera} width={400} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-        <Heading size={2} textColor="secondary">CSS</Heading>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+        <Heading size={2} textColor="primary">CSS</Heading>
         </Slide>
         <Slide transition={["fade"]} bgImage={gifs.dream}/>
         <Slide transition={["fade"]} bgImage={gifs.css}/>
-        <Slide transition={["fade"]} bgColor="primary">
-          <Image src={images.w3c} width={400}/>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Image src={images.w3c} bgColor="primary" width={400}/>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary">
+        <Slide transition={["fade"]} bgImage={images.bg}>
           <img src={images.status} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.past1996}/>
@@ -281,17 +284,17 @@ render(
         </Slide>
         <Slide transition={["fade"]} bgImage={gifs.dream}/>
         <Slide transition={["fade"]} bgImage={gifs.nightmare}/>
-        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-        <Heading size={6} textColor="black" caps>Disadvantages</Heading>
-        <List>
+        <Slide transition={["fade"]} bgImage={images.bg} textColor="primary">
+        <Heading size={6} textColor="primary" caps>Disadvantages</Heading>
+        <List type="italic">
           <ListItem>Poses compatibility issues with browsers.</ListItem>
           <ListItem>Consumes time during development.</ListItem>
           <ListItem>Requires validation of code due to faulty syntax and bugs in CSS file.</ListItem>
         </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={6} textColor="black" caps>Advantages</Heading>
-          <List>
+        <Slide transition={["fade"]} bgImage={images.bg} textColor="primary">
+          <Heading size={6} textColor="primary" caps>Advantages</Heading>
+          <List type="italic">
             <ListItem>Reduces time & effort of typing same style over and over.</ListItem>
             <ListItem>Helps to download a webpage quickly as it has less code.</ListItem>
             <ListItem>Easier to change styles of an element.</ListItem>
@@ -303,6 +306,7 @@ render(
           transition={["fade"]}
           lang="css"
           code={cssStructure}
+          bgImage={images.bg}
           ranges={[
             { loc: [0, 270], title: "CSS structure" },
             { loc: [1, 2], note: "Selector" },
@@ -314,13 +318,14 @@ render(
 
           ]}
         />
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://specificity.keegan.st/" target="_blank">Specificity</Link></Heading>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/LjLvaK/" textColor="primary" target="_blank">Specificity</Link></Heading>
         </Slide>
         <CodeSlide
           transition={["fade"]}
           lang="js"
           code={cssPast}
+          bgImage={images.bg}
           ranges={[
             { loc: [0, 6], note: "Injected inside style tags" },
             { loc: [7, 11], note: "Inside style attribute" }
@@ -330,6 +335,7 @@ render(
           transition={["fade"]}
           lang="js"
           code={cssVariables}
+          bgImage={images.bg}
           ranges={[
             { loc: [0, 270], title: "CSS Variables!!" },
             { loc: [0, 4], note: "Declare your variable" },
@@ -347,6 +353,7 @@ render(
           transition={["fade"]}
           lang="js"
           code={cssGrid}
+          bgImage={images.bg}
           ranges={[
             { loc: [0, 270], title: "CSS Grid-layout" },
             { loc: [0, 9], note: "HTML parent wrapper with 6 children" },
@@ -359,16 +366,25 @@ render(
             { loc: [36, 40] }
           ]}
         />
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" target="_blank">Demo</Link></Heading>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.past2013}>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
+          <Text textColor="transparent">blah blah</Text>
           <Image src={images.react} width={400} />
         </Slide>
           <CodeSlide
             transition={["fade"]}
             lang="js"
             code={bgCode}
+            bgImage={images.bg}
             ranges={[
               { loc: [0, 270], title: "Inline styles!" },
               { loc: [0, 11], note: "Declare your style object" },
@@ -382,9 +398,6 @@ render(
               { loc: [23, 26], image: images.kat }
             ]}
           />
-            {/* <Slide transition={["fade"]} bgColor="micolor">
-              <ComponentPlayground code={bgCode} theme="dark" previewBackgroundColor="yellow" />
-            </Slide> */}
             <Slide transition={["fade"]} bgImage={images.future}>
               <Heading size={2} textColor="primary">Future</Heading>
             </Slide>
@@ -392,6 +405,7 @@ render(
               transition={["fade"]}
               lang="js"
               code={styledComp}
+              bgImage={images.bg}
               ranges={[
                 { loc: [0, 270], title: "Styled components!" },
                 { loc: [0, 2], note: "Import styled components: 'yarn add styled-components'" },
@@ -399,20 +413,18 @@ render(
                 { loc: [12, 18], note: "Render the componenets" }
               ]}
             />
-              <Slide transition={["fade"]} bgColor="tertiary">
-                <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" target="_blank">Demo</Link></Heading>
+              <Slide transition={["fade"]} bgImage={images.bg}>
+                <Heading size={2} textColor="primary"><Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" textColor="primary" target="_blank">Demo</Link></Heading>
               </Slide>
-              <Slide transition={["fade"]} bgImage={images.past2013}>
+              <Slide transition={["fade"]} bgImage={images.bg}>
                 <CanIUse feature={"css-variables"}/>
               </Slide>
-              <Slide transition={["fade"]} bgImage={images.past1996}>
+              <Slide transition={["fade"]} bgImage={images.bg}>
                 <CanIUse feature={"css-grid"}/>
               </Slide>
               <Slide transition={["fade"]} bgImage={gifs.hoverboard}/>
               <Slide transition={["fade"]} bgImage={gifs.realhover}/>
-              <Slide transition={["fade"]} bgColor="black">
-                <Heading size={2} textColor="primary">🙏 Thanks!</Heading>
-              </Slide>
+              <Slide transition={["fade"]} bgImage={images.thanks}/>
       </Deck>
     );
   }
