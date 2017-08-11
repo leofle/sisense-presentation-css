@@ -3,7 +3,7 @@
 ## Reference
 
 #### This presentation was made with: 
-* [spectacle](https://github.com/FormidableLabs/spectacle)
+* [Spectacle](https://github.com/FormidableLabs/spectacle)
 * [React](https://facebook.github.io/react/)
 * [Styled-components](https://www.styled-components.com/)
 * [Giphy](https://giphy.com)
