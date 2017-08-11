@@ -28,10 +28,8 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
   ie3: require("../assets/ie3_screen.jpg"),
   status: require("../assets/status.png"),
   grid: require("../assets/grid.png"),
@@ -381,41 +379,6 @@ render(
             { loc: [11, 15] }
           ]}
         />
-        <CodeSlide
-          transition={["fade"]}
-          lang="js"
-          code={cssVariables}
-          bgImage={images.bg}
-          ranges={[
-            { loc: [0, 270], title: "CSS Variables!!" },
-            { loc: [0, 4], note: "Declare your variable" },
-            { loc: [4, 7], note: "Use it with var()" },
-            { loc: [8, 11] },
-            { loc: [12, 15] },
-            { loc: [16, 20] },
-            { loc: [21, 28] },
-            { loc: [31, 32] },
-            { loc: [29, 30] },
-            { loc: [34, 39] }
-          ]}
-        />
-        <CodeSlide
-          transition={["fade"]}
-          lang="js"
-          code={cssGrid}
-          bgImage={images.bg}
-          ranges={[
-            { loc: [0, 270], title: "CSS Grid-layout" },
-            { loc: [0, 9], note: "HTML parent wrapper with 6 children" },
-            { loc: [10, 16], note: "Apply grid" },
-            { loc: [16, 20], note: "Apply position of each cell" },
-            { loc: [20, 24] },
-            { loc: [24, 28] },
-            { loc: [28, 32] },
-            { loc: [32, 36] },
-            { loc: [36, 40] }
-          ]}
-        />
         <Slide transition={["fade"]} bgImage={images.bg}>
           <Typeface googleFont="Pacifico" weight={400}>
             <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
@@ -448,6 +411,41 @@ render(
               { loc: [17, 20] },
               { loc: [23, 26] },
               { loc: [23, 26], image: images.kat }
+            ]}
+          />
+          <CodeSlide
+            transition={["fade"]}
+            lang="js"
+            code={cssVariables}
+            bgImage={images.bg}
+            ranges={[
+              { loc: [0, 270], title: "CSS Variables!!" },
+              { loc: [0, 4], note: "Declare your variable" },
+              { loc: [4, 7], note: "Use it with var()" },
+              { loc: [8, 11] },
+              { loc: [12, 15] },
+              { loc: [16, 20] },
+              { loc: [21, 28] },
+              { loc: [31, 32] },
+              { loc: [29, 30] },
+              { loc: [34, 39] }
+            ]}
+          />
+          <CodeSlide
+            transition={["fade"]}
+            lang="js"
+            code={cssGrid}
+            bgImage={images.bg}
+            ranges={[
+              { loc: [0, 270], title: "CSS Grid-layout" },
+              { loc: [0, 9], note: "HTML parent wrapper with 6 children" },
+              { loc: [10, 16], note: "Apply grid" },
+              { loc: [16, 20], note: "Apply position of each cell" },
+              { loc: [20, 24] },
+              { loc: [24, 28] },
+              { loc: [28, 32] },
+              { loc: [32, 36] },
+              { loc: [36, 40] }
             ]}
           />
             <Slide transition={["fade"]} bgImage={images.future}>
