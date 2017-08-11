@@ -50,6 +50,7 @@ const images = {
 };
 
 const gifs = {
+  back: require("../assets/back.gif"),
   css: require("../assets/css.gif"),
   dream: require("../assets/dream.gif"),
   nightmare: require("../assets/nightmare.gif"),
@@ -277,6 +278,7 @@ render(
           <Text textColor="transparent">blah blah</Text>
           <Heading size={3} textColor="secondary">🤘</Heading>
         </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.back}/>
         <Slide transition={["fade"]} bgImage={images.past1994}/>
         <Slide transition={["fade"]} bgImage={images.bg}>
           <Image src={images.cup} width={500} />
