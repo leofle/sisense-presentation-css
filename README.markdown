@@ -1,4 +1,4 @@
-# CSS past, present and future
+# CSS Past, Present and Future
 
 ## Reference
 
