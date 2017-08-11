@@ -6,6 +6,6 @@
 
 ## Content
 
-### 1, 2, 3) Introduction
-### 4) 1994
-### 5) World Cup
+1, 2, 3) Introduction
+4) 1994
+5) World Cup
