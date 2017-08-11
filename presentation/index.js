@@ -70,7 +70,8 @@ const theme = createTheme({
   transparent: "transparent"
 }, {
   primary: "Montserrat",
-  secondary: "Helvetica"
+  secondary: "Helvetica",
+  hand: "Pacifico"
 });
 
 const Title = styled.h1`
@@ -247,12 +248,16 @@ render(
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
         <Slide transition={["zoom"]} bgImage={images.start}/>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Heading size={2} textColor="primary"> Sr UX Engineer </Heading>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary"> Sr UX Engineer </Heading>
+          </Typeface>
           <Text textColor="transparent">blah blah</Text>
           <Image src={images.sisense} width={500} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Heading size={2} textColor="primary"> I make cool stuff!</Heading>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary"> I make cool stuff!</Heading>
+          </Typeface>
           <Text textColor="transparent">blah blah</Text>
           <Heading size={3} textColor="secondary">🤘</Heading>
         </Slide>
@@ -261,14 +266,18 @@ render(
           <Image src={images.cup} width={500} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-        <Heading size={2} textColor="primary">Håkon Wium Lie</Heading>
+        <Typeface googleFont="Pacifico" weight={400}>
+          <Heading size={2} textColor="primary">Håkon Wium Lie</Heading>
+        </Typeface>
           <Image src={images.hak} width={300} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
           <Image src={images.opera} width={400} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-        <Heading size={2} textColor="primary">CSS</Heading>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary">CSS</Heading>
+          </Typeface>
         </Slide>
         <Slide transition={["fade"]} bgImage={gifs.dream}/>
         <Slide transition={["fade"]} bgImage={gifs.css}/>
@@ -285,12 +294,12 @@ render(
         <Slide transition={["fade"]} bgImage={gifs.dream}/>
         <Slide transition={["fade"]} bgImage={gifs.nightmare}/>
         <Slide transition={["fade"]} bgImage={images.bg} textColor="primary">
-        <Heading size={6} textColor="primary" caps>Disadvantages</Heading>
-        <List type="italic">
-          <ListItem>Poses compatibility issues with browsers.</ListItem>
-          <ListItem>Consumes time during development.</ListItem>
-          <ListItem>Requires validation of code due to faulty syntax and bugs in CSS file.</ListItem>
-        </List>
+          <Heading size={6} textColor="primary" caps>Disadvantages</Heading>
+          <List type="italic">
+            <ListItem>Poses compatibility issues with browsers.</ListItem>
+            <ListItem>Consumes time during development.</ListItem>
+            <ListItem>Requires validation of code due to faulty syntax and bugs in CSS file.</ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg} textColor="primary">
           <Heading size={6} textColor="primary" caps>Advantages</Heading>
@@ -319,7 +328,9 @@ render(
           ]}
         />
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/LjLvaK/" textColor="primary" target="_blank">Specificity</Link></Heading>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/LjLvaK/" textColor="primary" target="_blank">Specificity</Link></Heading>
+          </Typeface>
         </Slide>
         <CodeSlide
           transition={["fade"]}
@@ -367,7 +378,9 @@ render(
           ]}
         />
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
+          </Typeface>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.past2013}>
           <Text textColor="transparent">blah blah</Text>
@@ -399,7 +412,9 @@ render(
             ]}
           />
             <Slide transition={["fade"]} bgImage={images.future}>
-              <Heading size={2} textColor="primary">Future</Heading>
+              <Typeface googleFont="Pacifico" weight={400}>
+                <Heading size={2} textColor="primary">Future</Heading>
+              </Typeface>
             </Slide>
             <CodeSlide
               transition={["fade"]}
@@ -414,7 +429,9 @@ render(
               ]}
             />
               <Slide transition={["fade"]} bgImage={images.bg}>
-                <Heading size={2} textColor="primary"><Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" textColor="primary" target="_blank">Demo</Link></Heading>
+                <Typeface googleFont="Pacifico" weight={400}>
+                  <Heading size={2} textColor="primary"><Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" textColor="primary" target="_blank">Demo</Link></Heading>
+                </Typeface>
               </Slide>
               <Slide transition={["fade"]} bgImage={images.bg}>
                 <CanIUse feature={"css-variables"}/>
