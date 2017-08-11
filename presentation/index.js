@@ -45,6 +45,7 @@ const images = {
   start: require("../assets/bgwow.png"),
   past1994: require("../assets/1994.png"),
   past1996: require("../assets/1996.png"),
+  past2006: require("../assets/2006.png"),
   past2013: require("../assets/2013.png"),
   bg: require("../assets/bg.jpg"),
   thanks: require("../assets/thanks.png")
@@ -244,6 +245,23 @@ render(
     grid-row: 4;
   }
   `;
+
+  const bemHere = `
+  /* Block component */
+  .btn {}
+
+  /* Element that depends upon the block */
+  .btn__price {}
+
+  /* Modifier that changes the style of the block */
+  .btn--orange {}
+  .btn--big {}
+
+  <a class="btn btn--big btn--orange" href="http://sisense.com">
+    <span class="btn__price">$9.99</span>
+    <span class="btn__text">Subscribe</span>
+  </a>
+  `;
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
         <Slide transition={["zoom"]} bgImage={images.start}/>
@@ -340,6 +358,27 @@ render(
           ranges={[
             { loc: [0, 6], note: "Injected inside style tags" },
             { loc: [7, 11], note: "Inside style attribute" }
+          ]}
+        />
+        <Slide transition={["fade"]} bgImage={images.past2006}/>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary">SASS, LESS, ...</Heading>
+          </Typeface>
+        </Slide>
+        <Slide transition={["fade"]} bgImage={images.bg}>
+          <Typeface googleFont="Pacifico" weight={400}>
+            <Heading size={2} textColor="primary">BEM</Heading>
+          </Typeface>
+        </Slide>
+        <CodeSlide
+          transition={["fade"]}
+          lang="js"
+          code={bemHere}
+          bgImage={images.bg}
+          ranges={[
+            { loc: [0, 10] },
+            { loc: [11, 15] }
           ]}
         />
         <CodeSlide
