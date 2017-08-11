@@ -283,7 +283,9 @@ render(
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
         <Typeface googleFont="Pacifico" weight={400}>
-          <Heading size={2} textColor="primary">Håkon Wium Lie</Heading>
+          <Heading size={2} textColor="primary">
+            <Link href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie" textColor="primary" target="_blank">Håkon Wium Lie</Link>
+          </Heading>
         </Typeface>
           <Image src={images.hak} width={300} />
         </Slide>
@@ -345,7 +347,9 @@ render(
         />
         <Slide transition={["fade"]} bgImage={images.bg}>
           <Typeface googleFont="Pacifico" weight={400}>
-            <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/LjLvaK/" textColor="primary" target="_blank">Specificity</Link></Heading>
+            <Heading size={2} textColor="primary">
+              <Link href="https://codepen.io/leofle/pen/LjLvaK/" textColor="primary" target="_blank">Specificity</Link>
+            </Heading>
           </Typeface>
         </Slide>
         <CodeSlide
@@ -379,11 +383,6 @@ render(
             { loc: [11, 15] }
           ]}
         />
-        <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
-            <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
-          </Typeface>
-        </Slide>
         <Slide transition={["fade"]} bgImage={images.past2013}>
           <Text textColor="transparent">blah blah</Text>
           <Text textColor="transparent">blah blah</Text>
@@ -448,6 +447,17 @@ render(
               { loc: [36, 40] }
             ]}
           />
+          <Slide transition={["fade"]} bgImage={images.bg}>
+            <Typeface googleFont="Pacifico" weight={400}>
+              <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
+            </Typeface>
+          </Slide>
+          <Slide transition={["fade"]} bgImage={images.bg}>
+            <CanIUse feature={"css-variables"}/>
+          </Slide>
+          <Slide transition={["fade"]} bgImage={images.bg}>
+            <CanIUse feature={"css-grid"}/>
+          </Slide>
             <Slide transition={["fade"]} bgImage={images.future}>
               <Typeface googleFont="Pacifico" weight={400}>
                 <Heading size={2} textColor="primary">Future</Heading>
@@ -469,12 +479,6 @@ render(
                 <Typeface googleFont="Pacifico" weight={400}>
                   <Heading size={2} textColor="primary"><Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" textColor="primary" target="_blank">Demo</Link></Heading>
                 </Typeface>
-              </Slide>
-              <Slide transition={["fade"]} bgImage={images.bg}>
-                <CanIUse feature={"css-variables"}/>
-              </Slide>
-              <Slide transition={["fade"]} bgImage={images.bg}>
-                <CanIUse feature={"css-grid"}/>
               </Slide>
               <Slide transition={["fade"]} bgImage={gifs.hoverboard}/>
               <Slide transition={["fade"]} bgImage={gifs.realhover}/>
