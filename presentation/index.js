@@ -40,7 +40,7 @@ const images = {
   cup: require("../assets/cup1994.png"),
   opera: require("../assets/opera.png"),
   w3c: require("../assets/w3c.png"),
-  sisense: require("../assets/sisense.jpg"),
+  sisense: require("../assets/sisense.png"),
   future: require("../assets/future.jpg"),
   start: require("../assets/bgwow.png"),
   past1994: require("../assets/1994.png"),
@@ -249,7 +249,7 @@ render(
         <Slide transition={["fade"]} bgImage={images.bg}>
           <Heading size={2} textColor="primary"> Sr UX Engineer </Heading>
           <Text textColor="transparent">blah blah</Text>
-          <Image src={images.sisense} bgColor="primary" width={500} />
+          <Image src={images.sisense} width={500} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
           <Heading size={2} textColor="primary"> I make cool stuff!</Heading>
@@ -273,7 +273,7 @@ render(
         <Slide transition={["fade"]} bgImage={gifs.dream}/>
         <Slide transition={["fade"]} bgImage={gifs.css}/>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Image src={images.w3c} bgColor="primary" width={400}/>
+          <Image src={images.w3c} width={400}/>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
           <img src={images.status} />
