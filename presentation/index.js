@@ -264,14 +264,14 @@ render(
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="bar">
         <Slide transition={["zoom"]} bgImage={images.start}/>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
+          <Typeface googleFont="Josefin Slab" weight={400}>
             <Heading size={2} textColor="primary"> Sr UX Engineer </Heading>
           </Typeface>
           <Text textColor="transparent">blah blah</Text>
           <Image src={images.sisense} width={500} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
+          <Typeface googleFont="Josefin Slab" weight={400}>
             <Heading size={2} textColor="primary"> I make cool stuff!</Heading>
           </Typeface>
           <Text textColor="transparent">blah blah</Text>
@@ -282,7 +282,7 @@ render(
           <Image src={images.cup} width={500} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-        <Typeface googleFont="Pacifico" weight={400}>
+        <Typeface googleFont="Josefin Slab" weight={400}>
           <Heading size={2} textColor="primary">
             <Link href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie" textColor="primary" target="_blank">Håkon Wium Lie</Link>
           </Heading>
@@ -293,7 +293,7 @@ render(
           <Image src={images.opera} width={400} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
+          <Typeface googleFont="Josefin Slab" weight={400}>
             <Heading size={2} textColor="primary">CSS</Heading>
           </Typeface>
         </Slide>
@@ -312,22 +312,26 @@ render(
         <Slide transition={["fade"]} bgImage={gifs.dream}/>
         <Slide transition={["fade"]} bgImage={gifs.nightmare}/>
         <Slide transition={["fade"]} bgImage={images.bg} textColor="primary">
-          <Heading size={6} textColor="primary" caps>Disadvantages</Heading>
-          <List type="italic">
-            <ListItem>Poses compatibility issues with browsers.</ListItem>
-            <ListItem>Consumes time during development.</ListItem>
-            <ListItem>Requires validation of code due to faulty syntax and bugs in CSS file.</ListItem>
-          </List>
+          <Typeface googleFont="Josefin Slab" weight={400}>
+            <Heading size={6} textColor="primary" caps>Disadvantages</Heading>
+            <List type="italic">
+              <ListItem>Inconsistent Browser compatibility</ListItem>
+              <ListItem>Consumes time during development</ListItem>
+              <ListItem>Dead code removal</ListItem>
+              <ListItem>Silent errors</ListItem>
+            </List>
+          </Typeface>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg} textColor="primary">
-          <Heading size={6} textColor="primary" caps>Advantages</Heading>
-          <List type="italic">
-            <ListItem>Reduces time & effort of typing same style over and over.</ListItem>
-            <ListItem>Helps to download a webpage quickly as it has less code.</ListItem>
-            <ListItem>Easier to change styles of an element.</ListItem>
-            <ListItem>High content to code ratio. (Content >> Code)</ListItem>
-            <ListItem>Allows to design a website more quickly and efficiently!</ListItem>
-          </List>
+          <Typeface googleFont="Josefin Slab" weight={400}>
+            <Heading size={6} textColor="primary" caps>Advantages</Heading>
+            <List type="italic">
+              <ListItem>Progressive Enhancement</ListItem>
+              <ListItem>Bandwidth</ListItem>
+              <ListItem>Flexibility</ListItem>
+              <ListItem>Consistency</ListItem>
+            </List>
+          </Typeface>
         </Slide>
         <CodeSlide
           transition={["fade"]}
@@ -346,7 +350,7 @@ render(
           ]}
         />
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
+          <Typeface googleFont="Josefin Slab" weight={400}>
             <Heading size={2} textColor="primary">
               <Link href="https://codepen.io/leofle/pen/LjLvaK/" textColor="primary" target="_blank">Specificity</Link>
             </Heading>
@@ -364,12 +368,12 @@ render(
         />
         <Slide transition={["fade"]} bgImage={images.past2006}/>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
+          <Typeface googleFont="Josefin Slab" weight={400}>
             <Heading size={2} textColor="primary">SASS, LESS, ...</Heading>
           </Typeface>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.bg}>
-          <Typeface googleFont="Pacifico" weight={400}>
+          <Typeface googleFont="Josefin Slab" weight={400}>
             <Heading size={2} textColor="primary">BEM</Heading>
           </Typeface>
         </Slide>
@@ -448,7 +452,7 @@ render(
             ]}
           />
           <Slide transition={["fade"]} bgImage={images.bg}>
-            <Typeface googleFont="Pacifico" weight={400}>
+            <Typeface googleFont="Josefin Slab" weight={400}>
               <Heading size={2} textColor="primary"><Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" textColor="primary" target="_blank">Demo</Link></Heading>
             </Typeface>
           </Slide>
@@ -459,7 +463,7 @@ render(
             <CanIUse feature={"css-grid"}/>
           </Slide>
             <Slide transition={["fade"]} bgImage={images.future}>
-              <Typeface googleFont="Pacifico" weight={400}>
+              <Typeface googleFont="Josefin Slab" weight={400}>
                 <Heading size={2} textColor="primary">Future</Heading>
               </Typeface>
             </Slide>
@@ -476,7 +480,7 @@ render(
               ]}
             />
               <Slide transition={["fade"]} bgImage={images.bg}>
-                <Typeface googleFont="Pacifico" weight={400}>
+                <Typeface googleFont="Josefin Slab" weight={400}>
                   <Heading size={2} textColor="primary"><Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" textColor="primary" target="_blank">Demo</Link></Heading>
                 </Typeface>
               </Slide>
