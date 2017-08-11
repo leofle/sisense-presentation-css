@@ -4,6 +4,9 @@
 
 #### This presentation was made with: [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
 
+## Thanks to
+* Brian Weisz for the amazing Art
+
 ## Content
 
 * Introduction
@@ -44,5 +47,3 @@
 * Hoverboard GIF (fiction)
 * Hoverboard GIF (reality)
 * Thanks!!
-
-### Special thanks to Brian Weisz for the amazing Art!!
