@@ -2,7 +2,7 @@
 
 ## Reference
 
-#### This presentation was made with: [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
+#### This presentation was made with: [spectacle](https://github.com/FormidableLabs/spectacle).
 
 ## Thanks to
 * Brian Weisz for the amazing Art
