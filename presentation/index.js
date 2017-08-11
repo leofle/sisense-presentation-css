@@ -44,7 +44,16 @@ const images = {
   future: require("../assets/future.jpg"),
   start: require("../assets/start.jpg"),
   past1994: require("../assets/1994.png"),
-  past1996: require("../assets/1996.png")
+  past1996: require("../assets/1996.png"),
+  past2013: require("../assets/2013.png")
+};
+
+const gifs = {
+  css: require("../assets/css.gif"),
+  dream: require("../assets/dream.gif"),
+  nightmare: require("../assets/nightmare.gif"),
+  hoverboard: require("../assets/hoverboard.gif"),
+  realhover: require("../assets/realhover.gif")
 };
 
 preloader(images);
@@ -96,12 +105,12 @@ const HelloWorld = ({ name }) => (
 render(
   <HelloWorld name="Sisense" />,
   mountNode)`;
-  const pseudoNoSolution = `<button style={m(
+    const pseudoNoSolution = `<button style={m(
         this.styles.container,
         this.state.hovered && this.styles.hover,
       )}>{this.props.children}</button>`;
 
-  const styledComp = `
+    const styledComp = `
   import styled from "styled-components";
 
   const Title = styled.h1\`
@@ -122,7 +131,7 @@ render(
 
 `;
 
-  const cssStructure = `
+    const cssStructure = `
     .myClass {
       background-color: red;
     }
@@ -137,7 +146,7 @@ render(
 
   `;
 
-  const cssPast = `
+    const cssPast = `
   <style>
     .myClass {
       background-color: red;
@@ -150,7 +159,7 @@ render(
   </div>
 
   `;
-  const cssVariables = `
+    const cssVariables = `
     element {
       --my-bg-color: hotpink;
     }
@@ -190,7 +199,7 @@ render(
       }
     }
   `;
-  const cssGrid = `
+    const cssGrid = `
   <div class="wrapper">
     <div class="one">One</div>
     <div class="two">Two</div>
@@ -245,10 +254,10 @@ render(
           <Heading size={3} textColor="secondary">🤘</Heading>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.past1994}/>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgColor="black">
           <Image src={images.cup} width={500} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgColor="primary">
         <Heading size={2} textColor="secondary">Håkon Wium Lie</Heading>
           <Image src={images.hak} width={300} />
         </Slide>
@@ -258,12 +267,8 @@ render(
         <Slide transition={["fade"]} bgColor="tertiary">
         <Heading size={2} textColor="secondary">CSS</Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={3} textColor="secondary">🕺 👯 🤘 😆</Heading>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={3} textColor="secondary">😡</Heading>
-        </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.dream}/>
+        <Slide transition={["fade"]} bgImage={gifs.css}/>
         <Slide transition={["fade"]} bgColor="primary">
           <Image src={images.w3c} width={400}/>
         </Slide>
@@ -271,15 +276,11 @@ render(
           <img src={images.status} />
         </Slide>
         <Slide transition={["fade"]} bgImage={images.past1996}/>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgImage={images.past1996}>
           <img src={images.ie3} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={3} textColor="secondary">🕺 👯 🤘 😆</Heading>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={3} textColor="secondary">😡</Heading>
-        </Slide>
+        <Slide transition={["fade"]} bgImage={gifs.dream}/>
+        <Slide transition={["fade"]} bgImage={gifs.nightmare}/>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
         <Heading size={6} textColor="black" caps>Disadvantages</Heading>
         <List>
@@ -361,9 +362,7 @@ render(
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" target="_blank">Demo</Link></Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="hotpink">
-          <Heading size={2} textColor="secondary">2013</Heading>
-          <Text textColor="hotpink">blah blah</Text>
+        <Slide transition={["fade"]} bgImage={images.past2013}>
           <Image src={images.react} width={400} />
         </Slide>
           <CodeSlide
@@ -403,12 +402,14 @@ render(
               <Slide transition={["fade"]} bgColor="tertiary">
                 <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://www.webpackbin.com/bins/-Ko8lByzUlHQBaAUS2jZ" target="_blank">Demo</Link></Heading>
               </Slide>
-              <Slide transition={["fade"]} bgColor="hotpink">
+              <Slide transition={["fade"]} bgImage={images.past2013}>
                 <CanIUse feature={"css-variables"}/>
               </Slide>
-              <Slide transition={["fade"]} bgColor="hotpink">
+              <Slide transition={["fade"]} bgImage={images.past1996}>
                 <CanIUse feature={"css-grid"}/>
               </Slide>
+              <Slide transition={["fade"]} bgImage={gifs.hoverboard}/>
+              <Slide transition={["fade"]} bgImage={gifs.realhover}/>
               <Slide transition={["fade"]} bgColor="black">
                 <Heading size={2} textColor="primary">🙏 Thanks!</Heading>
               </Slide>
