@@ -42,7 +42,9 @@ const images = {
   w3c: require("../assets/w3c.png"),
   sisense: require("../assets/sisense.jpg"),
   future: require("../assets/future.jpg"),
-  start: require("../assets/start.jpg")
+  start: require("../assets/start.jpg"),
+  past1994: require("../assets/1994.png"),
+  past1996: require("../assets/1996.png")
 };
 
 preloader(images);
@@ -242,9 +244,7 @@ render(
           <Text textColor="lime">blah blah</Text>
           <Heading size={3} textColor="secondary">🤘</Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={2} textColor="secondary"> 1994 </Heading>
-        </Slide>
+        <Slide transition={["fade"]} bgImage={images.past1994}/>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Image src={images.cup} width={500} />
         </Slide>
@@ -270,9 +270,7 @@ render(
         <Slide transition={["fade"]} bgColor="primary">
           <img src={images.status} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={2} textColor="secondary">📅 1996</Heading>
-        </Slide>
+        <Slide transition={["fade"]} bgImage={images.past1996}/>
         <Slide transition={["fade"]} bgColor="tertiary">
           <img src={images.ie3} />
         </Slide>
@@ -364,7 +362,7 @@ render(
           <Heading size={2} textColor="secondary">👩🏼‍🚀 <Link href="https://codepen.io/leofle/pen/YxNyLz?editors=1100" target="_blank">Demo</Link></Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="hotpink">
-          <Heading size={2} textColor="secondary">2013 - Present</Heading>
+          <Heading size={2} textColor="secondary">2013</Heading>
           <Text textColor="hotpink">blah blah</Text>
           <Image src={images.react} width={400} />
         </Slide>
