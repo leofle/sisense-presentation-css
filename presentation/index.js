@@ -42,7 +42,7 @@ const images = {
   w3c: require("../assets/w3c.png"),
   sisense: require("../assets/sisense.jpg"),
   future: require("../assets/future.jpg"),
-  start: require("../assets/start.jpg"),
+  start: require("../assets/bgwow.png"),
   past1994: require("../assets/1994.png"),
   past1996: require("../assets/1996.png"),
   past2013: require("../assets/2013.png"),
