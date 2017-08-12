@@ -151,16 +151,19 @@ render(
   `;
 
     const cssPast = `
-  <style>
-    .myClass {
-      background-color: red;
-    }
-  </style>
 
-  <div class="myClass"
-       style="background-color: red;">
-    ...content here
-  </div>
+      <link rel="stylesheet" type="text/css" href="../mySource/mycss.css" />
+
+      <style>
+        .myClass {
+          background-color: red;
+        }
+      </style>
+
+      <div class="myClass"
+           style="background-color: red;">
+        ...content here
+      </div>
 
   `;
     const cssVariables = `
@@ -364,8 +367,9 @@ render(
           code={cssPast}
           bgImage={images.bg}
           ranges={[
-            { loc: [0, 6], note: "Injected inside style tags" },
-            { loc: [7, 11], note: "Inside style attribute" }
+            { loc: [0, 3], note: "Injected inside link tag in header" },
+            { loc: [3, 9], note: "Injected inside style tags in the body" },
+            { loc: [9, 14], note: "Inside style attribute inline" }
           ]}
         />
         <Slide transition={["fade"]} bgImage={images.past2006}/>
